@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все блоки блокчейна</title>
+</head>
+<body>
+<table border="2" align="center">
+    <thead>
+        <tr>
+            <th>Хеш блока</th>
+            <th>Высота блока</th>
+            <th>Время блока</th>
+            <th>Адрес майнера</th>
+            <th>Количество транзакций</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for block in blocks %}
+            <tr style="text-align: center;">
+                <td>{{ block.block_hash }}</td>
+                <td>{{ block.height }}</td>
+                <td>{{ block.timestamp }}</td>
+                <td>{{ block.miner_address }}</td>
+                <td>{{ block.transaction_quantity }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<span>
+    Страницы {{ page_obj.number }}/{{ page_obj.paginator.num_pages }}.
+</span>
+{% if page_obj.has_previous %}
+    <a href="?page=1">Первая страница</a>
+    <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
+{% endif %}
+{% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">Вперед</a>
+    <a href="?page={{ page_obj.paginator.num_pages }}">Последняя страница</a>
+{% endif %}
+</body>
+</html>

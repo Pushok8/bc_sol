@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о блоке</title>
+</head>
+<body>
+    <ul>
+        <li>Высота блока: {{ block.height }}</li>
+        <li>Хеш блока: {{ block.block_hash }}</li>
+        <li>Время блок: {{ block.timestamp }}</li>
+        <li>Адрес майнера: {{ block.miner_address }}</li>
+        <li>Количество транзакций: {{ block.transaction_quantity }}</li>
+    </ul>
+</body>
+</html>

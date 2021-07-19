@@ -14,3 +14,6 @@ class BCBlock(models.Model):
         verbose_name = _('Блок блокчейна')
         verbose_name_plural = _('Блоки блокчейна')
         ordering = ['-timestamp']
+
+    def __str__(self):
+        return self.block_hash
