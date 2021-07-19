@@ -1,16 +1,15 @@
-import os
 from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = '@yp*ddk8eeai%@7mi)k+^qgp_sduoty+-f0i8&eqhn5j9oi^v6'
 
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['enigmatic-sands-43547.herokuapp.com', '0.0.0.0', '127.0.0.1']
 
 
 INSTALLED_APPS = [
@@ -58,9 +57,9 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USERNAME'),
-        'PASSWORD': os.getenv('DB_USER_PASSWORD'),
+        'NAME': 'bc_sol_db',
+        'USER': 'bc_sol',
+        'PASSWORD': 'x[)VA5d!0LF#sg721',
     }
 }
 
